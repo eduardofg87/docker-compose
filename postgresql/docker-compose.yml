@@ -4,7 +4,7 @@ services:
   postgres-compose:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: "Postgres2019!"
+      POSTGRES_PASSWORD: "PostgreSQL@2019"
     ports:
       - "5432:5432"
     volumes:
@@ -16,7 +16,7 @@ services:
     image: dpage/pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: "fake@email.com"
-      PGADMIN_DEFAULT_PASSWORD: "PgAdmin2019!"
+      PGADMIN_DEFAULT_PASSWORD: "PostgreSQL@2019"
     ports:
       - "8081:80"
     depends_on:
