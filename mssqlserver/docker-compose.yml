@@ -1,0 +1,15 @@
+version: "3" 
+services:
+  sqlserver2017:
+    image: microsoft/mssql-server-linux:2017-latest
+    volumes:
+      - "db_data:/var/opt/mssql"
+    ports:
+      - "11433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=SqlServer@2017
+      - MSSQL_PID=Developer
+
+volumes:
+  db_data:
