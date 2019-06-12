@@ -10,4 +10,4 @@ Microsoft markets at least a dozen different editions of Microsoft SQL Server, a
 
 ## Credits 
 Developed by [Eduardo Gonçalves](https://twitter.com/eduardofg87), I am also on [Telegram](https://t.me/eduardofg87).
-[PostgreSQL on Wikipedia](https://en.wikipedia.org/wiki/Microsoft_SQL_Server)
+[Microsoft SQL Server on Wikipedia](https://en.wikipedia.org/wiki/Microsoft_SQL_Server)
