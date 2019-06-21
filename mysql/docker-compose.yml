@@ -1,15 +1,27 @@
-version: "3" 
+version: '3'
+
 services:
-
-  mysql:
-    image: mysql:5.7.20
-    volumes:
-      - "db_data:/var/lib/mysql"
-      - "./mysql/initial_data:/docker-entrypoint-initdb.d"
-    ports:
-      - "3307:3306"
+  mysqlsrv:
+    image: mysql:5.7
+    restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=123.456
+      MYSQL_ROOT_PASSWORD: "MySql2019!"
+      MYSQL_DATABASE: "testedb"
+    ports:
+      - "3308:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    networks:
+      - mysql-compose-network
 
-volumes:
-  db_data:
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+    networks:
+      - mysql-compose-network
+
+networks: 
+  mysql-compose-network:
+    driver: bridge
